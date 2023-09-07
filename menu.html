@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu</title>
+    </head>
+    <body style="background-color: rgb(216, 211, 211)">
+        <!-- navbar -->
+        <div class="row nav">
+            <div class="col-12 navbar">
+                <div class="navigation">
+                    <div class="topnav">
+                        <a href="./index.html" class="active"
+                            ><img
+                                src="./images/Daily Drip.png"
+                                alt="daily-drip-logo"
+                                class="miniLogo"
+                            />
+                        </a>
+                        <div id="myLinks">
+                            <a href="./index.html">Home</a>
+                            <a href="./new.html">What's new</a>
+                            <a href="./menu.html"
+                                >Menu <i class="fa fa-caret-down"></i
+                            ></a>
+                            <hr />
+                            <a href="#hot">Hot Drinks</a>
+                            <a href="#cold">Cold Drinks</a>
+                            <a href="#fresh">Fresh Drinks</a>
+                            <hr />
+
+                            <a href="./about.html">About</a>
+                            <a href="./location.html">Location</a>
+                        </div>
+                        <a
+                            href="javascript:void(0);"
+                            class="icon"
+                            onclick="myFunction()"
+                        >
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <div class="col-1"></div>
+                    <ul>
+                        <div class="col-2">
+                            <li class="word">
+                                <a href="./index.html">Home</a>
+                            </li>
+                        </div>
+                        <div class="col-2">
+                            <li class="word">
+                                <a href="./menu.html">Menu</a>
+                            </li>
+                        </div>
+                        <div class="col-2">
+                            <li>
+                                <a href="./index.html">
+                                    <img
+                                        src="./images/Daily Drip.png"
+                                        alt="daily-drip-logo"
+                                        class="logo"
+                                    />
+                                </a>
+                            </li>
+                        </div>
+                        <div class="col-2">
+                            <li class="word">
+                                <a href="./about.html">About</a>
+                            </li>
+                        </div>
+                        <div class="col-2 right">
+                            <li class="word">
+                                <a href="./location.html">Location</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end of navbar -->
+
+        <!-- menu header -->
+
+        <div class="row row1">
+            <a href="#hot"><i class="fa fa-caret-up mini">go up</i></a>
+            <a href="#hot"><i class="fa fa-caret-up mini-mini">go up</i></a>
+            <div class="col-12 menu">
+                <div class="col-4 else">
+                    <div class="dropdown">
+                        <a href="#"
+                            ><span class="all"
+                                >All products <i class="fa fa-caret-down"></i
+                            ></span>
+                        </a>
+                        <div class="dropdown-options">
+                            <a href="#hot">Hot Drinks</a>
+                            <a href="#cold">Cold Drinks</a>
+                            <a href="#fresh">Fresh Drinks</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 else">
+                    <a href="./new.html">What's new</a>
+                </div>
+
+                <div class="col-4 mini-cart">
+                    <div class="cart">
+                        <button id="showFormBtn">
+                            <i class="fa fa-coffee" id="showFormBtn"></i>
+                        </button>
+                        <p id="count">0</p>
+                    </div>
+                    <div class="container" id="myForm" style="display: none">
+                        <div id="root"></div>
+                        <div class="sidebar">
+                            <div class="head"><p>My Order</p></div>
+                            <div id="cartItem">You didn't order yet</div>
+                            <div class="foot">
+                                <h3>Total</h3>
+                                <h2 id="total">$ 0.00</h2>
+                            </div>
+                            <div class="foot">
+                                <h3>Lebanese Total</h3>
+                                <h2 id="Ltotal">0 L.L.</h2>
+                            </div>
+                            <div>
+                                <a href="./form.html" target="_blank"
+                                    ><button>order</button></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of menu header -->
+
+        <br id="hot" />
+        <br />
+        <!-- HOT DRINKS -->
+        <div class="row">
+            <div class="col-12 col-s-12">
+                <h3>Menu/Hot Drinks</h3>
+                <br />
+            </div>
+        </div>
+
+        <!-- BLACK HOT DRINKS -->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: -25px">Black</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/ristretto.jpg"
+                        alt="ristretto"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4 class="card-title">Ristretto</h4>
+                        <button onclick="addtocart(0)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/espresso.jpg"
+                        alt="espresso"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Espresso</h4>
+                        <button onclick="addtocart(1)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/doppio.jpg"
+                        alt="doppio"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Doppio</h4>
+                        <button onclick="addtocart(2)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2nd Row-->
+        <div class="row row-body">
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/pour-over.jpg"
+                        alt="pour over"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4 class="card-title">Pour Over</h4>
+                        <button onclick="addtocart(3)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2-->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/americano.jpg"
+                        alt="americano"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Americano</h4>
+                        <button onclick="addtocart(4)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/french-press.jpg"
+                        alt="french press"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">French Press</h4>
+                        <button onclick="addtocart(5)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Black -->
+
+        <!-- WHITE HOTE DRINKS -->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: 80px">White</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/peppermint-mocha.jpg"
+                        alt="peppermint mocha"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4 class="card-title">Peppermint Coffee</h4>
+                        <button onclick="addtocart(6)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/mocha.png"
+                        alt="Café mocha"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Café mocha</h4>
+                        <button onclick="addtocart(7)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/latte.jpg"
+                        alt="latte"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Latte</h4>
+                        <button onclick="addtocart(8)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2nd Row -->
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/capuccino.jpg"
+                        alt="capuccino"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4 class="card-title">Cappuccino</h4>
+                        <button onclick="addtocart(9)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/caramel-latte.jpg"
+                        alt="caramel latte"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Caramel Latte</h4>
+                        <button onclick="addtocart(10)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of White -->
+
+        <!-- CHOCLOATE HOT DRINKS -->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: 80px">Chocoalte</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/hot-chocolate.jpg"
+                        alt="hot chocolate"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4 class="card-title">Hot Chocolate</h4>
+                        <button onclick="addtocart(11)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/white-chocolate.jpg"
+                        alt="white chocolate"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">White Chocolate</h4>
+                        <button onclick="addtocart(12)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/hazelnut-hot-chocolate.jpg"
+                        alt="hazelnut hot chocolate"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Hazelnut Hot Chocolate</h4>
+                        <button onclick="addtocart(13)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Chocolate -->
+
+        <!-- OTHER HOT DRINKS -->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: 80px">Others</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/tea.jpg"
+                        alt="tea"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4 class="card-title">Tea</h4>
+                        <button onclick="addtocart(14)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/nescafe.jpg"
+                        alt="nescafe"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Nescafe</h4>
+                        <button onclick="addtocart(15)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/moka-pot.jpg"
+                        alt="moka pot"
+                        class="card-img-top"
+                    />
+                    <div class="card-body">
+                        <h4 class="card-title">Moka Pot</h4>
+                        <button onclick="addtocart(16)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Others -->
+
+        <!-- COLD DRINKS -->
+        <div class="row" id="cold">
+            <div class="col-12 col-s-12">
+                <h3 style="margin-top: 70px">Menu/Cold Drinks</h3>
+                <br />
+            </div>
+        </div>
+
+        <!-- ICED COFFEE DRINKS-->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: -25px">Iced Coffee</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/coconut-horchata-iced-coffee.jpg"
+                        alt="coconut horchata iced coffee"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4>Coconut Horchata Iced Coffee</h4>
+                        <button onclick="addtocart(17)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="./images/iced-coffee.jpg" alt="iced coffee" />
+                    <div class="card-body">
+                        <h4>Iced Coffee</h4>
+                        <button onclick="addtocart(18)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/dalgona.jpg"
+                        alt="dalgona"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4>Dalgona</h4>
+                        <button onclick="addtocart(19)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Iced Coffee -->
+
+        <!-- LATTE COLD DRINKS-->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: 80px">Latte</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/iced-latte.jpg"
+                        alt="iced latte"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4>Iced Latte</h4>
+                        <button onclick="addtocart(20)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/iced-caramel-latte.jpg"
+                        alt="iced caramel latte"
+                    />
+                    <div class="card-body">
+                        <h4>Iced Caramel Latte</h4>
+                        <button onclick="addtocart(21)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/spanish-iced-latte.jpg"
+                        alt="spanish iced latte"
+                    />
+                    <div class="card-body">
+                        <h4>Spanish Iced Latte</h4>
+                        <button onclick="addtocart(22)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Latte -->
+
+        <!-- MOCHA COLD DRINKS-->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: 80px">Mocha</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/iced-mocha.jpg"
+                        alt="iced mocha"
+                        class="card-img-top"
+                    />
+                    <div class="class-body">
+                        <h4>Iced Mocha</h4>
+                        <button onclick="addtocart(23)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/iced-white-chocolate-mocha.jpg"
+                        alt="iced white chocolate mocha"
+                    />
+                    <div class="card-body">
+                        <h4>Iced White Chocolate Mocha</h4>
+                        <button onclick="addtocart(24)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/iced-hazelnut-chocolate.jpg"
+                        alt="iced hazelnut chocolate mocha"
+                    />
+                    <div class="class-body">
+                        <h4>Iced Hazelnut Chocolate Mocha</h4>
+                        <button onclick="addtocart(25)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Mocha -->
+
+        <!-- FRESH DRINKS -->
+        <div class="row" id="fresh">
+            <div class="col-12 col-s-12">
+                <h3 style="margin-top: 70px">Menu/Fresh Drinks</h3>
+                <br />
+            </div>
+        </div>
+
+        <!-- SMOOTHIES -->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: -25px">Smoothies</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="./images/mango-smoothie.jpg" alt="mango" />
+                    <div class="class-body">
+                        <h4>Mango</h4>
+                        <button onclick="addtocart(26)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="./images/peach-smoothie.jpg" alt="peach" />
+                    <div class="card-body">
+                        <h4>Peach</h4>
+                        <button onclick="addtocart(27)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/strawberry-smoothie.jpg"
+                        alt="strawberry"
+                    />
+                    <div class="card-body">
+                        <h4>Strawberry</h4>
+                        <button onclick="addtocart(28)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2nd Row-->
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/mango-peach-smoothie.jpg"
+                        alt="mango peach"
+                    />
+                    <div class="class-body">
+                        <h4>Mango Peach</h4>
+                        <button onclick="addtocart(29)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/strawberry-mango-smoothie.jpg"
+                        alt="strawberry mango"
+                    />
+                    <div class="class-body">
+                        <h4>Strawberry Mango</h4>
+                        <button onclick="addtocart(30)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/apple-mango-smoothie.jpg"
+                        alt="apple mango"
+                    />
+                    <div class="class-body">
+                        <h4>Apple Mango</h4>
+                        <button onclick="addtocart(31)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Smoothies -->
+
+        <!-- OTHERS -->
+        <!-- 1st Row -->
+        <div class="row">
+            <!-- Title -->
+            <div class="col-12 col-s-12">
+                <h2 style="margin-top: 80px">Others</h2>
+                <hr />
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="./images/pumpkin-smoothie.jpg" alt="pumpkin" />
+                    <div class="class-body">
+                        <h4>Pumpkin</h4>
+                        <button onclick="addtocart(32)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4">
+                <div class="card">
+                    <img src="./images/iced-tea.jpg" alt="iced tea" />
+                    <div class="class-body">
+                        <h4>Iced Tea</h4>
+                        <button onclick="addtocart(33)">order now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-4">
+                <div class="card">
+                    <img
+                        src="./images/mint-lemonade-smoothie.jpg"
+                        alt="mint lemonade"
+                    />
+                    <div class="card-body">
+                        <h4>Mint Lemonade</h4>
+                        <button onclick="addtocart(34)">order now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of Others -->
+
+        <!-- footer -->
+        <div class="row">
+            <div class="col-12 footer">
+                <div class="col-4 phone-number">
+                    <h2>CONTACT US</h2>
+                    <hr />
+                    <br />
+                    <br />
+                    <p style="font-size: 15px">
+                        Address:
+                        <span style="color: burlywood">Mar Elias, Beirut</span>
+                    </p>
+                    <br />
+                    <p style="font-size: 15px">
+                        Phone:
+                        <span style="color: burlywood"> +961 70 787 878 </span>
+                    </p>
+                    <br />
+                    <p style="font-size: 15px">
+                        E-mail:
+                        <span style="color: burlywood"
+                            >daily.drip@gmail.com</span
+                        >
+                    </p>
+                </div>
+                <div class="col-4 col-s-12 icons">
+                    <a href="#">
+                        <i
+                            class="fa fa-instagram"
+                            style="font-size: 24px; color: white"
+                        ></i>
+                    </a>
+
+                    <a href="#">
+                        <i
+                            class="fa fa-facebook"
+                            style="font-size: 24px; color: white"
+                        ></i>
+                    </a>
+
+                    <a href="#">
+                        <i
+                            class="fa fa-linkedin"
+                            style="font-size: 24px; color: white"
+                        ></i>
+                    </a>
+                </div>
+
+                <div class="col-4 mail">
+                    <h2>OPENING HOURS</h2>
+                    <hr />
+                    <br /><br />
+                    <p>
+                        <span style="font-size: 15px; color: burlywood"
+                            >Monday - Thursday
+                        </span>
+                        &nbsp;&nbsp;&nbsp; 7:00am - 12:00pm <br /><br />
+                        <span style="font-size: 15px; color: burlywood"
+                            >Saturday - Sunday</span
+                        >
+                        &nbsp;&nbsp;&nbsp; 11:00am - 12:00pm
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end of footer -->
+
+        <script>
+            document
+                .getElementById("showFormBtn")
+                .addEventListener("click", function () {
+                    var form = document.getElementById("myForm");
+                    form.style.display =
+                        form.style.display === "none" ? "block" : "none";
+                });
+
+            function openNav() {
+                document.getElementById("open").style.display = "none";
+                document.getElementById("miniNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("miniNav").style.width = "0";
+                document.getElementById("open").style.display = "block";
+            }
+        </script>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form 3</title>
+    </head>
+    <body style="background-color: rgb(216, 211, 211)">
+        <div class="form">
+            <h1
+                style="text-align: center; background-color: #333; color: white"
+            >
+                Delivery Order Information:
+            </h1>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h2>
+                        <i
+                            class="fa fa-user"
+                            style="font-size: 24px; color: white"
+                        ></i>
+                        &nbsp; Full Name
+                    </h2>
+                    <div class="col-12">
+                        <div class="col-6">
+                            <input
+                                type="text"
+                                class="fname"
+                                placeholder="First Name"
+                                required
+                            />
+                            <br />
+                            <label for="fname">First name</label>
+                        </div>
+                        <div class="col-6">
+                            <input
+                                type="text"
+                                class="lname"
+                                placeholder="Last Name"
+                                required
+                            />
+                            <br />
+                            <label for="lname">Last name</label>
+                        </div>
+                    </div>
+                    <h2>
+                        <i
+                            class="fa fa-map-marker"
+                            style="font-size: 24px; color: white"
+                        ></i>
+                        &nbsp;Address
+                    </h2>
+                    <div class="col-12">
+                        <select name="street" id="street" required>
+                            <option value="">Please Select</option>
+                            <option value="">Ain El Mreisse</option>
+                            <option value="">Badaro</option>
+                            <option value="">Clemenceau</option>
+                            <option value="">Corniche Beirut</option>
+                            <option value="">Hamra Street</option>
+                            <option value="">Monnot</option>
+                            <option value="">Verdun</option>
+                            <option value="">Marfaa-Port of Beiru</option>
+                            <option value="">Minet El Hosn</option>
+                            <option value="">Zokak El-Blat</option>
+                            <option value="">Bachoura</option>
+                            <option value="">Achrafieh</option>
+                            <option value="">Saifi</option>
+                            <option value="">Moussaitbe</option>
+                            <option value="">Mazraa</option>
+                        </select>
+
+                        <br />
+                        <label for="street">Street Address</label>
+                    </div>
+                    <div class="col-12">
+                        <div class="col-6">
+                            <input
+                                type="text"
+                                placeholder="Building Name"
+                                required
+                            />
+                            <br />
+                            <label for="building">Building Name</label>
+                        </div>
+                        <div class="col-6">
+                            <input
+                                type="number"
+                                placeholder="Floor Number"
+                                required
+                            />
+                            <br />
+                            <label for="floorNumber">Floor Number</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <textarea
+                            name="details"
+                            id="details"
+                            rows="5"
+                            placeholder="More Details"
+                        ></textarea>
+                        <label for="details">More Details</label>
+                    </div>
+                    <h2>
+                        <i
+                            class="fa fa-info-circle"
+                            style="font-size: 24px; color: white"
+                        ></i>
+                        &nbsp;Contacts
+                    </h2>
+                    <div class="col-12">
+                        <div class="col-6">
+                            <input
+                                type="number"
+                                placeholder="+961 00 000 000"
+                                required
+                            />
+                            <br />
+                            <label for="phoneNumber">Phone Number</label>
+                        </div>
+                        <div class="col-6">
+                            <input
+                                type="text"
+                                placeholder="example@gmail.com"
+                            />
+                            <label for="email">E-mail</label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" onclick="alertSubmission()">
+                            Confirm
+                        </button>
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+        <script>
+            function alertSubmission() {
+                window.alert(
+                    "Thank you for ordering from Daily Drip! We hope to see you again soon."
+                );
+            }
+        </script>
+    </body>
+</html>
